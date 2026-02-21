@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Aktivitas - KKN 13 Parangargo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="icon" type="images" href="images/13logo.jpeg">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f0c219",
+                        "secondary": "#21367d",
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#221e10",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .sticky-nav { position: sticky; top: 0; z-index: 50; }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in-section.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display transition-colors duration-300">
+    <!-- Sticky Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-secondary text-white py-4 px-6 md:px-20 lg:px-40 border-b border-white/10 shadow-lg">
+
+  <div class="flex items-center justify-between relative">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-3 z-10">
+      <img src="images/13logo.jpeg"
+           alt="Logo KKN Parangargo"
+           class="h-10 w-10 rounded-lg bg-primary p-1">
+      <h2 class="text-xl font-extrabold tracking-tight">
+        KKN<span class="text-primary"> Parangargo</span>
+      </h2>
+    </div>
+
+    <!-- Hamburger -->
+    <button id="menu-btn" class="md:hidden z-10">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+
+    <!-- MENU (CENTER ABSOLUTE SAAT DESKTOP) -->
+    <nav id="menu"
+      class="hidden md:flex flex-col md:flex-row
+      absolute md:absolute
+      top-[72px] md:top-1/2
+      left-0 md:left-1/2
+      md:-translate-x-1/2 md:-translate-y-1/2
+      w-full md:w-auto
+      bg-secondary md:bg-transparent
+      px-6 md:px-0 py-4 md:py-0
+      space-y-4 md:space-y-0 md:space-x-10">
+
+      <a class="block text-sm font-semibold hover:text-primary transition" href="index.html">Beranda</a>
+      <a class="block text-sm font-semibold hover:text-primary transition" href="index.html#profile">Profile Desa</a>
+      <a class="block text-sm font-semibold hover:text-primary transition" href="index.html#tentang">Tentang Kami</a>
+      <a class="block text-sm font-semibold hover:text-primary transition" href="index.html#sosial">Sosial Media</a>
+      <a class="block text-sm font-semibold hover:text-primary transition" href="aktivitas.html">Aktivitas</a>
+      <a class="block text-sm font-semibold hover:text-primary transition" href="produk.html">Produk</a>
+      <a class="block text-sm font-semibold hover:text-primary transition" href="berita-acara.html">Berita Acara</a>
+
+    </nav>
+
+  </div>
+</header>
+
+
+
+    <!-- Main Content -->
+    <main class="py-20 px-6 md:px-20 lg:px-40">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-secondary dark:text-primary">Aktivitas Kegiatan</h1>
+                <div class="w-20 h-1.5 bg-primary mx-auto mt-4 rounded-full"></div>
+                <p class="text-gray-600 dark:text-gray-300 mt-4">Aktivitas Kegiatan yang telah dilaksanakan oleh Tim KKN 13 Parangargo</p>
+            </div>
+
+            <!-- Activities Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Activity Card 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all flex flex-col">
+                    <img class="w-full h-auto" data-alt="Program Kebun Organik" src="images/fr4623.jpeg"/>
+                    <div class="p-6 flex flex-col flex-grow justify-end">
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-2">Program Kebun Organik</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Mengubah lahan kosong menjadi kebun pertanian organik yang produktif untuk menanam tanaman demi mendukung ketahanan pangan dan pemberdayaan masyarakat desa..</p>
+                        <button class="w-full py-3 bg-primary text-secondary font-bold rounded-lg hover:opacity-90 transition-opacity activity-btn" data-activity="workshop">Baca Selengkapnya</button>
+                    </div>
+                </div>
+
+                <!-- Activity Card 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all flex flex-col">
+                    <img class="w-full h-auto" data-alt="Pendampingan Pembelajaran Interaktif di SLB" src="images/IMG_0598.jpg"/>
+                    <div class="p-6 flex flex-col flex-grow justify-end">
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-2">Pendampingan Pembelajaran Interaktif di SLB</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Mendukung Sekolah Luar Biasa (SLB) dalam menciptakan pembelajaran yang interaktif dan menyenangkan melalui pendampingan mengajar, permainan edukatif, serta kegiatan senam bersama.</p>
+                        <button class="w-full py-3 bg-primary text-secondary font-bold rounded-lg hover:opacity-90 transition-opacity activity-btn" data-activity="hidroponik">Baca Selengkapnya</button>
+                    </div>
+                </div>
+
+                <!-- Activity Card 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all flex flex-col">
+                    <img class="w-full h-auto" data-alt="Pendampingan Pembelajaran di TPQ" src="images/IMG_2855.jpg"/>
+                    <div class="p-6 flex flex-col flex-grow justify-end">
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-2">Pendampingan Pembelajaran di TPQ</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Mahasiswa KKN berkontribusi dalam membantu kegiatan belajar mengajar di TPQ melalui pendampingan membaca Al-Qur’an, hafalan doa, dan pemberian materi dasar keislaman guna membentuk generasi yang religius dan berakhlak baik.</p>
+                        <button class="w-full py-3 bg-primary text-secondary font-bold rounded-lg hover:opacity-90 transition-opacity activity-btn" data-activity="tamanbaca">Baca Selengkapnya</button>
+                    </div>
+                </div>
+
+                <!-- Activity Card 4 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all flex flex-col">
+                    <img class="w-full h-auto" data-alt="Partisipasi Kegiatan Posyandu" src="images/IMG_3129.jpg"/>
+                    <div class="p-6 flex flex-col flex-grow justify-end">
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-2">Partisipasi Kegiatan Posyandu</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Mahasiswa KKN berpartisipasi dalam kegiatan Posyandu Balita dengan membantu proses penimbangan, pencatatan data, dan pendampingan peserta guna mendukung pelayanan kesehatan ibu dan anak di desa.</p>
+                        <button class="w-full py-3 bg-primary text-secondary font-bold rounded-lg hover:opacity-90 transition-opacity activity-btn" data-activity="sanitasi">Baca Selengkapnya</button>
+                    </div>
+                </div>
+
+                <!-- Activity Card 5 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all flex flex-col">
+                    <img class="w-full h-auto" data-alt="Bermain Bersama Anak-Anak Dusun" src="images/IMG_2113.jpg"/>
+                    <div class="p-6 flex flex-col flex-grow justify-end">
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-2">Bermain Bersama Anak-Anak Dusun</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Kegiatan bermain bersama anak-anak dusun sebagai bentuk pendekatan sosial dan hiburan untuk menciptakan suasana kebersamaan yang hangat dan menyenangkan.</p>
+                        <button class="w-full py-3 bg-primary text-secondary font-bold rounded-lg hover:opacity-90 transition-opacity activity-btn" data-activity="umkm">Baca Selengkapnya</button>
+                    </div>
+                </div>
+
+                <!-- Activity Card 6 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all flex flex-col">
+                    <img class="w-full h-auto" data-alt="Senam Bersama Karang Taruna Dusun" src="images/IMG_2361.jpg"/>
+                    <div class="p-6 flex flex-col flex-grow justify-end">
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-2">Senam Bersama Karang Taruna Dusun</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Kegiatan senam bersama Karang Taruna dusun sebagai upaya meningkatkan kebugaran jasmani, mempererat kebersamaan, serta membangun semangat hidup sehat di lingkungan masyarakat.</p>
+                        <button class="w-full py-3 bg-primary text-secondary font-bold rounded-lg hover:opacity-90 transition-opacity activity-btn" data-activity="teknologi">Baca Selengkapnya</button>
+                    </div>
+                </div>
+
+                <!-- Activity Card 7 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all flex flex-col">
+                    <img class="w-full h-auto" data-alt="Refreshing Bersama Keluarga" src="images/bb1.jpg"/>
+                    <div class="p-6 flex flex-col flex-grow justify-end">
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-2">Refreshing Bersama Keluarga</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Kegiatan liburan bersama Keluarga Kelompok KKN 13 Universitas Merdeka Malang ke Lembah Bromo sebagai momen refreshing untuk mengurangi stres dan mempererat kebersamaan tim.</p>
+                        <button class="w-full py-3 bg-primary text-secondary font-bold rounded-lg hover:opacity-90 transition-opacity activity-btn" data-activity="wanita">Baca Selengkapnya</button>
+                    </div>
+                </div>
+
+                <!-- Activity Card 8 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all flex flex-col">
+                    <img class="w-full h-auto" data-alt="Malam Perpisahan dan Pelepasan KKN Bersama Warga" src="images/pp1.jpg"/>
+                    <div class="p-6 flex flex-col flex-grow justify-end">
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-2">Malam Perpisahan dan Pelepasan KKN Bersama Warga</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Momen perpisahan mahasiswa KKN bersama warga desa melalui pemutaran video luaran KKN dan aftermovie, dilanjutkan buka bersama serta sesi foto sebagai kenang-kenangan.</p>
+                        <button class="w-full py-3 bg-primary text-secondary font-bold rounded-lg hover:opacity-90 transition-opacity activity-btn" data-activity="lingkungan">Baca Selengkapnya</button>
+                    </div>
+                </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white/60 py-10 px-6 md:px-20 lg:px-40 border-t border-white/10">
+        <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <img src="images/13logo.jpeg" alt="Logo KKN Parangargo" class="h-8 w-8 rounded bg-primary p-1">
+                <h2 class="text-lg font-extrabold text-white">KKN 13 Parangargo</h2>
+            </div>
+            <p class="text-sm">© 2026 Tim KKN 13 Universitas Merdeka Malang</p>
+            <div class="flex gap-6">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Activity Popup Modal -->
+    <div id="activity-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-4xl w-full max-h-[80vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 id="modal-title" class="text-2xl font-bold text-secondary dark:text-primary"></h3>
+                    <button id="close-modal" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                        <span class="material-symbols-outlined text-3xl">close</span>
+                    </button>
+                </div>
+                <!-- Image Carousel -->
+                <div id="image-carousel" class="relative w-full mb-6 overflow-hidden rounded-lg hidden">
+                    <div id="carousel-container" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Images will be populated by JavaScript -->
+                    </div>
+                    <!-- Navigation Dots -->
+                    <div id="carousel-dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        <!-- Dots will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div id="modal-content" class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('main');
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                section.classList.add('fade-in-section');
+                observer.observe(section);
+            });
+
+            // Activity Modal Functionality
+            const modal = document.getElementById('activity-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+            const closeModal = document.getElementById('close-modal');
+
+            // Activity data
+            const activityData = {
+                workshop: {
+                    title: 'Program Kebun Organik',
+                    images: [
+                        'images/fr4623.jpeg',
+                        'images/IMG_1548.jpg',
+                        'images/IMG_1544.jpg',
+                        'images/svg2.jpeg',
+                        'images/te4g34.jpeg'
+                        
+                    ],
+                    content: `
+                        <p><strong>Program Kebun Organik</strong> merupakan program kerja utama yang berfokus pada pemanfaatan lahan kosong menjadi lahan pertanian organik yang produktif di Dusun Durenan. Lahan yang sebelumnya tidak dimanfaatkan kini diolah secara bersama-sama menjadi kebun organik yang dapat menunjang kebutuhan pangan serta meningkatkan kesadaran masyarakat terhadap pertanian ramah lingkungan.</p>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Kegiatan yang Dilakukan:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Pembersihan dan pengolahan lahan kosong</li>
+                            <li>Pembuatan rak tanam organik</li>
+                            <li>Penanaman sayuran</li>
+                            <li>Perawatan dan pemantauan pertumbuhan tanaman</li>
+                        </ul>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Manfaat Program:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Mengoptimalkan pemanfaatan lahan desa</li>
+                            <li>Mendukung ketahanan pangan lokal</li>
+                            <li>Meningkatkan kesadaran akan pertanian sehat dan ramah lingkungan</li>
+                            <li>Membuka peluang pengembangan ekonomi berbasis hasil pertanian</li>
+                        </ul>
+
+                        <p><em>Program ini diharapkan dapat menjadi langkah awal menuju desa yang lebih mandiri dalam bidang pangan serta berkelanjutan dalam pengelolaan lingkungan.</em></p>
+                    `
+                },
+                hidroponik: {
+                    title: 'Pendampingan Pembelajaran Interaktif di SLB',
+                    images: [
+                        'images/IMG_0598.jpg',
+                        'images/IMG_0605.jpg',
+                        'images/IMG_0474.jpg',
+                        'images/IMG_0456.jpg',
+                        'images/IMG_0383.jpg'
+                        
+                    ],
+                    content: `
+                        <p><strong>Pendampingan Pembelajaran Interaktif di SLB</strong> merupakan program kerja sampingan yang bertujuan untuk membantu Sekolah Luar Biasa dalam menciptakan suasana belajar yang lebih aktif, menyenangkan, dan bermakna bagi siswa berkebutuhan khusus.</p>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Kegiatan yang Dilakukan:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Pendampingan proses belajar mengajar di kelas</li>
+                            <li>Membantu guru dalam penyampaian materi</li>
+                            <li>Pembuatan dan pelaksanaan permainan edukatif</li>
+                            <li>Kegiatan senam bersama siswa</li>
+                            <li>Interaksi dan pendekatan personal untuk membangun kepercayaan diri siswa</li>
+                        </ul>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Manfaat Program:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Meningkatkan semangat dan motivasi belajar siswa</li>
+                            <li>Melatih kemampuan motorik dan koordinasi gerak</li>
+                            <li>Meningkatkan konsentrasi dan fokus belajar</li>
+                            <li>Mengembangkan kemampuan interaksi sosial</li>
+                            <li>Menciptakan suasana belajar yang lebih menyenangkan dan inklusif</li>
+                        </ul>
+                    `
+                },
+                tamanbaca: {
+                    title: 'Pendampingan Pembelajaran di TPQ',
+                    images: [
+                        'images/IMG_2855.jpg',
+                        'images/IMG_2836.jpg',
+                        'images/IMG_2853.jpg',
+                        'images/IMG_1430.jpg',
+                        'images/IMG_1435.jpg',
+                        'images/IMG_1626.jpg',
+                        'images/IMG_2724.jpg',
+                        'images/IMG_2847.jpg',
+                        'images/IMG_1773.jpg',
+                        'images/IMG_1455.jpg'
+                        
+                    ],
+                    content: `
+                        <p><strong>Pendampingan Pembelajaran di TPQ</strong> merupakan salah satu program kerja yang bertujuan untuk mendukung proses pendidikan keagamaan anak-anak di desa. Melalui kegiatan ini, mahasiswa KKN turut serta membantu ustadz dan ustadzah dalam mendampingi proses belajar mengajar agar berjalan lebih efektif dan menyenangkan.</p>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Kegiatan yang Dilakukan:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Pendampingan membaca Al-Qur’an</li>
+                            <li>Membimbing hafalan doa sehari-hari</li>
+                            <li>Penyampaian materi dasar keislaman</li>
+                            <li>Membantu pengelolaan kelas saat pembelajaran</li>
+                            <li>Memberikan motivasi dan pendekatan yang menyenangkan</li>
+                        </ul>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Manfaat Program:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Meningkatkan kemampuan membaca Al-Qur’an</li>
+                            <li>Membantu anak-anak menghafal doa dengan lebih baik</li>
+                            <li>Menumbuhkan semangat belajar agama</li>
+                            <li>Membentuk karakter religius dan berakhlak mulia</li>
+                            <li>Mendukung peran TPQ dalam pendidikan keagamaan desa</li>
+                        </ul>
+                    `
+                },
+                sanitasi: {
+                    title: 'Partisipasi Kegiatan Posyandu',
+                    images: [
+                        'images/IMG_3129.jpg',
+                        'images/IMG_3137.jpg',
+                        'images/IMG_3125.jpg',
+                        'images/IMG_3122.jpg',
+                        'images/IMG_3142.jpg',
+                        'images/IMG_3194.jpg'
+                        
+                    ],
+                    content: `
+                        <p><strong>Partisipasi Kegiatan Posyandu</strong> merupakan salah satu bentuk kontribusi mahasiswa KKN dalam mendukung pelayanan kesehatan dasar di desa. Posyandu memiliki peran penting dalam memantau tumbuh kembang balita serta kesehatan ibu, sehingga keberlangsungan dan kelancaran kegiatan ini sangat dibutuhkan oleh masyarakat.</p>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Kegiatan yang Dilakukan:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Membantu proses penimbangan dan tinggi badan balita</li>
+                            <li>Membantu pencatatan data perkembangan anak</li>
+                            <li>Mendampingi ibu dan balita selama kegiatan</li>
+                            <li>Berinteraksi dan memberikan edukasi ringan terkait kesehatan</li>
+                        </ul>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Manfaat Program:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Mendukung kelancaran pelayanan posyandu</li>
+                            <li>Membantu pemantauan tumbuh kembang balita</li>
+                            <li>Meningkatkan kesadaran masyarakat tentang kesehatan ibu dan anak</li>
+                            <li>Mempererat hubungan mahasiswa dengan warga desa</li>
+                            <li>Menumbuhkan kepedulian terhadap layanan kesehatan dasar</li>
+                        </ul>
+                    `
+                },
+                umkm: {
+                    title: 'Bermain Bersama Anak-Anak Dusun',
+                    images: [
+                        'images/IMG_2113.jpg',
+                        'images/IMG_2081.jpg',
+                        'images/IMG_2046.jpg',
+                        'images/IMG_2038.jpg',
+                        'images/IMG_2033.jpg',
+                        'images/IMG_2029.jpg',
+                        'images/IMG_2023.jpg',
+                        'images/IMG_2009.jpg',
+                        'images/IMG_2000.jpg',
+                        'images/IMG_1984.jpg',
+                        'images/IMG_1954.jpg',
+                        'images/IMG_1975.jpg',
+                        'images/IMG_1899.jpg',
+                        'images/IMG_1966.jpg',
+                        'images/IMG_1963.jpg',
+                        'images/IMG_1960.jpg',
+                        'images/IMG_1869.jpg'
+                        
+                    ],
+                    content: `
+                        <p><strong>Bermain Bersama Anak-Anak Dusun</strong> merupakan salah satu kegiatan kebersamaan yang dilakukan mahasiswa KKN sebagai upaya membangun kedekatan dengan masyarakat, khususnya anak-anak. Kegiatan ini dilaksanakan dalam suasana santai dan penuh keceriaan, sehingga tercipta hubungan yang lebih akrab antara mahasiswa dan warga dusun.</p>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Kegiatan yang Dilakukan:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Permainan kelompok yang menyenangkan</li>
+                            <li>Lomba-lomba sederhana</li>
+                            <li>Ice breaking dan permainan interaktif</li>
+                            <li>Dokumentasi dan kebersamaan bersama anak-anak</li>
+                        </ul>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Manfaat Program:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Membangun kedekatan antara mahasiswa dan anak-anak dusun</li>
+                            <li>Memberikan hiburan yang positif dan menyenangkan</li>
+                            <li>Menumbuhkan rasa kebersamaan dan kekompakan</li>
+                            <li>Menciptakan suasana yang hangat dan penuh keceriaan</li>
+                        </ul>
+                    `
+                },
+                teknologi: {
+                    title: 'Senam Bersama Karang Taruna Dusun',
+                    images: [
+                        'images/IMG_2361.jpg',
+                        'images/IMG_2326.jpg',
+                        'images/IMG_2327.jpg',
+                        'images/IMG_2341.jpg',
+                        'images/IMG_2337.jpg',
+                        'images/IMG_2343.jpg',
+                        'images/IMG_2344.jpg'
+                        
+                    ],
+                    content: `
+                        <p><strong>Senam Bersama Karang Taruna Dusun</strong> merupakan salah satu kegiatan kolaboratif antara mahasiswa KKN dan pemuda setempat dalam rangka membangun pola hidup sehat serta mempererat hubungan sosial di lingkungan dusun. Kegiatan ini dilaksanakan secara bersama-sama dengan penuh semangat dan antusiasme.</p>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Kegiatan yang Dilakukan:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Pelaksanaan senam bersama</li>
+                            <li>Pemanasan dan pendinginan terarah</li>
+                            <li>Dokumentasi dan kebersamaan antar peserta</li>
+                        </ul>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Manfaat Program:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Meningkatkan kebugaran dan kesehatan jasmani</li>
+                            <li>Menumbuhkan semangat hidup sehat</li>
+                            <li>Mempererat hubungan mahasiswa dengan Karang Taruna</li>
+                            <li>Menciptakan suasana positif dan energik di lingkungan</li>
+                        </ul>
+
+                    `
+                },
+                wanita: {
+                    title: 'Refreshing Bersama Keluarga',
+                    images: [
+                        'images/bb1.jpg',
+                        'images/bbIMG_0905.jpg',
+                        'images/bbIMG_0930.jpg',
+                        'images/bbIMG_9611.jpg'
+                        
+                    ],
+                    content: `
+                        <p><strong>Refreshing Bersama Keluarga</strong> Sebagai bentuk menjaga kekompakan dan kesehatan mental selama menjalankan program kerja, Kelompok KKN 13 Universitas Merdeka Malang mengadakan kegiatan refreshing bersama ke Lembah Bromo. Kegiatan ini menjadi momen istirahat sejenak dari rutinitas program KKN yang padat.</p>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Kegiatan yang Dilakukan:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Menikmati keindahan alam dan suasana pegunungan</li>
+                            <li>Kebersamaan dan penguatan teamwork</li>
+                            <li>Diskusi santai</li>
+                            <li>Sesi foto dan dokumentasi bersama</li>
+                        </ul>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Manfaat Kegiatan:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Mengurangi stres dan kejenuhan</li>
+                            <li>Menjaga kesehatan mental dan kebugaran</li>
+                            <li>Mempererat kekompakan dan solidaritas tim</li>
+                            <li>Meningkatkan semangat untuk melanjutkan program KKN</li>
+                        </ul>
+                    `
+                },
+                lingkungan: {
+                    title: 'Malam Perpisahan dan Pelepasan KKN Bersama Warga',
+                    images: [
+                        'images/pp1.jpg',
+                        'images/pp3.jpg',
+                        
+                    ],
+                    content: `
+                        <p><strong>Malam Perpisahan dan Pelepasan KKN Bersama Warga</strong> menjadi momen penuh haru sekaligus kebersamaan antara mahasiswa dan warga desa setelah rangkaian program kerja selesai dilaksanakan. Kegiatan ini diselenggarakan sebagai bentuk ungkapan terima kasih atas dukungan, kerja sama, dan sambutan hangat dari masyarakat selama masa pengabdian.</p>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Kegiatan yang Dilakukan:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Sambutan dan ucapan terima kasih</li>
+                            <li>Pemutaran video luaran KKN</li>
+                            <li>Penayangan aftermovie perjalanan KKN</li>
+                            <li>Buka bersama warga</li>
+                            <li>Foto bersama sebagai dokumentasi</li>
+                        </ul>
+
+                        <h4 class="font-bold text-lg mt-4 mb-2">Manfaat Kegiatan:</h4>
+                        <ul class="list-disc list-inside space-y-1 mb-4">
+                            <li>Mempererat hubungan emosional antara mahasiswa dan warga</li>
+                            <li>Menjadi momen refleksi atas program yang telah dilaksanakan</li>
+                            <li>Meninggalkan kesan dan kenangan yang baik</li>
+                            <li>Menumbuhkan rasa kebersamaan dan kekeluargaan</li>
+                        </ul>
+                    `
+                },
+            };
+
+            // Event listeners for activity buttons
+            document.querySelectorAll('.activity-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const activity = this.getAttribute('data-activity');
+                    const data = activityData[activity];
+
+                    if (data) {
+                        modalTitle.textContent = data.title;
+                        modalContent.innerHTML = data.content;
+
+                        // Handle image carousel
+                        const carousel = document.getElementById('image-carousel');
+                        const carouselContainer = document.getElementById('carousel-container');
+                        const carouselDots = document.getElementById('carousel-dots');
+
+                        if (data.images && data.images.length > 0) {
+                            // Clear previous images and dots
+                            carouselContainer.innerHTML = '';
+                            carouselDots.innerHTML = '';
+
+                            // Add images
+                            data.images.forEach((imageSrc, index) => {
+                                const img = document.createElement('img');
+                                img.src = imageSrc;
+                                img.alt = `${data.title} - Image ${index + 1}`;
+                                img.className = 'w-full h-auto object-contain flex-shrink-0';
+                                carouselContainer.appendChild(img);
+
+                                // Add dot
+                                const dot = document.createElement('button');
+                                dot.className = 'w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-colors';
+                                dot.setAttribute('data-slide', index);
+                                dot.addEventListener('click', () => goToSlide(index));
+                                carouselDots.appendChild(dot);
+                            });
+
+                            carousel.classList.remove('hidden');
+
+                            // Initialize carousel
+                            let currentSlide = 0;
+                            const totalSlides = data.images.length;
+
+                            // Update dots
+                            function updateDots() {
+                                const dots = carouselDots.querySelectorAll('button');
+                                dots.forEach((dot, index) => {
+                                    dot.classList.toggle('bg-white', index === currentSlide);
+                                    dot.classList.toggle('bg-white/50', index !== currentSlide);
+                                });
+                            }
+
+                            // Go to specific slide
+                            function goToSlide(slideIndex) {
+                                currentSlide = slideIndex;
+                                carouselContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+                                updateDots();
+                            }
+
+                            // Auto scroll every 3 seconds
+                            let autoScrollInterval = setInterval(() => {
+                                currentSlide = (currentSlide + 1) % totalSlides;
+                                goToSlide(currentSlide);
+                            }, 3000);
+
+                            // Initialize first slide
+                            updateDots();
+
+                            // Pause auto-scroll on hover
+                            carousel.addEventListener('mouseenter', () => {
+                                clearInterval(autoScrollInterval);
+                            });
+
+                            // Resume auto-scroll on mouse leave
+                            carousel.addEventListener('mouseleave', () => {
+                                autoScrollInterval = setInterval(() => {
+                                    currentSlide = (currentSlide + 1) % totalSlides;
+                                    goToSlide(currentSlide);
+                                }, 3000);
+                            });
+
+                        } else {
+                            carousel.classList.add('hidden');
+                        }
+
+                        modal.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                    }
+                });
+            });
+
+            // Close modal functionality
+            closeModal.addEventListener('click', function() {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+
+            // Close modal when clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        
+    </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+  const menuLinks = menu.querySelectorAll("a");
+
+  // Toggle menu saat tombol diklik
+  menuBtn.addEventListener("click", function () {
+    menu.classList.toggle("hidden");
+  });
+
+  // Tutup menu saat link diklik (mobile only)
+  menuLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      if (window.innerWidth < 768) {
+        menu.classList.add("hidden");
+      }
+    });
+  });
+
+});
+</script>
+
+
+</body>
+</html>

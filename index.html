@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KKN 13 Parangargo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="icon" type="images" href="images/13logo.jpeg">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f0c219",
+              "secondary": "#21367d",
+              "background-light": "#f8f8f6",
+              "background-dark": "#221e10",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .sticky-nav { position: sticky; top: 0; z-index: 50; }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in-section.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display transition-colors duration-300">
+<!-- Sticky Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-secondary text-white py-4 px-6 md:px-20 lg:px-40 border-b border-white/10 shadow-lg">
+
+  <div class="flex items-center justify-between relative">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-3 z-10">
+      <img src="images/13logo.jpeg"
+           alt="Logo KKN Parangargo"
+           class="h-10 w-10 rounded-lg bg-primary p-1">
+      <h2 class="text-xl font-extrabold tracking-tight">
+        KKN<span class="text-primary"> Parangargo</span>
+      </h2>
+    </div>
+
+    <!-- Hamburger -->
+    <button id="menu-btn" class="md:hidden z-10">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+
+    <!-- MENU (CENTER ABSOLUTE SAAT DESKTOP) -->
+    <nav id="menu"
+      class="hidden md:flex flex-col md:flex-row
+      absolute md:absolute
+      top-[72px] md:top-1/2
+      left-0 md:left-1/2
+      md:-translate-x-1/2 md:-translate-y-1/2
+      w-full md:w-auto
+      bg-secondary md:bg-transparent
+      px-6 md:px-0 py-4 md:py-0
+      space-y-4 md:space-y-0 md:space-x-10">
+
+      <a class="block text-sm font-semibold hover:text-primary transition" href="index.html">Beranda</a>
+      <a class="block text-sm font-semibold hover:text-primary transition" href="index.html#profile">Profile Desa</a>
+      <a class="block text-sm font-semibold hover:text-primary transition" href="index.html#tentang">Tentang Kami</a>
+      <a class="block text-sm font-semibold hover:text-primary transition" href="index.html#sosial">Sosial Media</a>
+      <a class="block text-sm font-semibold hover:text-primary transition" href="aktivitas.html">Aktivitas</a>
+      <a class="block text-sm font-semibold hover:text-primary transition" href="produk.html">Produk</a>
+      <a class="block text-sm font-semibold hover:text-primary transition" href="berita-acara.html">Berita Acara</a>
+
+    </nav>
+
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative min-h-[600px] flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Warga desa berkumpul bersama mahasiswa KKN di pendopo" style='background-image: linear-gradient(rgba(33, 54, 125, 0.7) 0%, rgba(33, 54, 125, 0.85) 100%), url("images/IMG_5485.jpg");'>
+</div>
+<div class="relative z-10 max-w-4xl px-6 text-center text-white">
+<h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
+                Membangun Bersama <br/><span class="text-primary">Desa Parangargo</span>
+</h1>
+<p class="text-lg md:text-xl font-normal opacity-90 mb-10 max-w-2xl mx-auto">
+                Dokumentasi perjalanan pengabdian mahasiswa KKN untuk memajukan potensi desa dan memberdayakan masyarakat lokal secara berkelanjutan.
+            </p>
+</div>
+</div>
+</section>
+<!-- Profile Desa Section -->
+<section class="py-20 px-6 md:px-20 lg:px-40" id="profile">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/2">
+<img class="rounded-2xl shadow-2xl border-8 border-primary/10" data-alt="Foto desa Parangargo" src="images/kabmalang.png"/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Destinasi &amp; Budaya</span>
+<h2 class="text-3xl md:text-4xl font-extrabold text-secondary dark:text-primary mt-2 mb-6">Profil Desa Parangargo</h2>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                        Desa Parangargo merupakan sebuah desa yang berada di Kecamatan Wagir, Kabupaten Malang, Provinsi Jawa Timur, Indonesia. Desa ini memiliki status administratif sebagai wilayah tingkat desa dengan kode wilayah 35.07.21.2004 dan kode pos 65158. Lokasinya berada di area daratan dengan elevasi sekitar 416–449 meter di atas permukaan laut, dikelilingi oleh desa lain di wilayah Kecamatan Wagir.
+                    </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border-l-4 border-primary">
+<p class="text-2xl font-bold text-secondary dark:text-white">6.106</p>
+<p class="text-xs text-gray-500 uppercase font-semibold">Penduduk</p>
+</div>
+<div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border-l-4 border-primary">
+<p class="text-2xl font-bold text-secondary dark:text-white">223 Ha</p>
+<p class="text-xs text-gray-500 uppercase font-semibold">Luas Area</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tentang Kami Section -->
+<section class="py-20 bg-secondary text-white px-6 md:px-20 lg:px-40" id="tentang">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row-reverse gap-12 items-center">
+<div class="w-full md:w-1/2">
+<img class="rounded-2xl shadow-2xl border-8 border-white/10" data-alt="Foto grup mahasiswa KKN berpose bersama di depan balai desa" src="images/dwswrg.jpg"/>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="text-3xl md:text-4xl font-extrabold mb-6">Tentang Kami</h2>
+<p class="text-lg opacity-80 mb-4 leading-relaxed">
+                    Kami adalah Mahasiswa KKN Parangargo Kelompok 13 semester ganjil 2026 dari Universitas Merdeka Malang yang hadir untuk memberikan kontribusi nyata bagi masyarakat Desa Parangargo. Melalui semangat kolaborasi, pengabdian, dan pemberdayaan, kami berupaya menciptakan program yang bermanfaat serta berkelanjutan.
+                </p>
+                <p class="text-lg opacity-80 mb-4 leading-relaxed">
+                    Program kerja utama kami berfokus pada pemanfaatan lahan kosong menjadi lahan pertanian organik yang produktif. Lahan yang sebelumnya tidak dimanfaatkan kini kami olah menjadi kebun organik yang dapat digunakan untuk menanam berbagai jenis sayuran seperti kangkung, pakcoy, selada, dan bayam.
+                </p>
+                <p class="text-lg opacity-80 mb-8 leading-relaxed">
+                    Melalui program ini, kami berharap dapat membantu meningkatkan ketahanan pangan, memberikan edukasi mengenai pertanian organik, serta mendorong masyarakat untuk memanfaatkan potensi lahan yang ada secara optimal. Kami percaya bahwa langkah kecil yang dilakukan bersama dapat memberikan dampak besar bagi lingkungan dan kesejahteraan masyarakat.
+                </p>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<!-- Sosial Media Section -->
+<section class="py-20 px-6 bg-white dark:bg-background-dark text-center border-t border-gray-100 dark:border-gray-800" id="sosial">
+<h2 class="text-2xl font-extrabold text-secondary dark:text-primary mb-10">Ikuti Jejak Kami di Media Sosial</h2>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="flex flex-col items-center group" href="https://www.instagram.com/kkn13parangargo" target="_blank">
+<div class="size-16 rounded-full overflow-hidden mb-2 group-hover:scale-110 transition-transform">
+<img src="images/instagramicon.png" alt="Instagram" class="w-full h-full object-cover">
+</div>
+<span class="text-sm font-bold text-gray-600 dark:text-gray-400">Instagram</span>
+</a>
+<a class="flex flex-col items-center group" href="https://vm.tiktok.com/ZS91KrsgpwUbb-1ElYe/" target="_blank">
+<div class="size-16 rounded-full overflow-hidden mb-2 group-hover:scale-110 transition-transform">
+<img src="images/tiktokicon.png" alt="TikTok" class="w-full h-full object-cover">
+</div>
+<span class="text-sm font-bold text-gray-600 dark:text-gray-400">Tiktok</span>
+</a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white/60 py-10 px-6 md:px-20 lg:px-40 border-t border-white/10">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3">
+<img src="images/13logo.jpeg" alt="Logo KKN Parangargo" class="h-8 w-8 rounded bg-primary p-1">
+<h2 class="text-lg font-extrabold text-white">KKN 13 Parangargo</h2>
+</div>
+<p class="text-sm">© 2026 Tim KKN 13 Universitas Merdeka Malang</p>
+<div class="flex gap-6">
+</div>
+</div>
+</footer>
+
+<!-- Activity Popup Modal -->
+<div id="activity-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modal-title" class="text-2xl font-bold text-secondary dark:text-primary"></h3>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <div id="modal-content" class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section:not(header):not(footer)');
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            section.classList.add('fade-in-section');
+            observer.observe(section);
+        });
+
+        // Activity Modal Functionality
+        const modal = document.getElementById('activity-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const closeModal = document.getElementById('close-modal');
+
+        // Activity data
+        const activityData = {
+            workshop: {
+                title: 'Workshop Digital Marketing',
+                content: `
+                    <p><strong>Workshop Digital Marketing</strong> merupakan program pelatihan intensif yang dirancang khusus untuk membantu pelaku UMKM di Desa Parangargo memasarkan produk mereka secara efektif melalui platform digital.</p>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Materi yang Dipelajari:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Strategi pemasaran di media sosial (Instagram, Facebook, TikTok)</li>
+                        <li>Optimasi marketplace online (Shopee, Tokopedia, Bukalapak)</li>
+                        <li>Teknik fotografi produk yang menarik</li>
+                        <li>Content creation untuk branding UMKM</li>
+                        <li>Analisis performa penjualan online</li>
+                    </ul>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Manfaat Program:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Meningkatkan penjualan produk lokal</li>
+                        <li>Memperluas jangkauan pasar</li>
+                        <li>Meningkatkan brand awareness desa</li>
+                        <li>Menciptakan peluang ekonomi baru</li>
+                    </ul>
+
+                    <p><em>Program ini telah berhasil membantu 15 UMKM desa meningkatkan penjualan mereka hingga 200% dalam 3 bulan pertama.</em></p>
+                `
+            },
+            hidroponik: {
+                title: 'Implementasi Hidroponik',
+                content: `
+                    <p><strong>Implementasi Hidroponik</strong> adalah program inovasi pertanian modern yang memperkenalkan sistem pertanian tanpa tanah kepada masyarakat Desa Parangargo untuk mengoptimalkan lahan pekarangan yang terbatas.</p>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Teknologi yang Diterapkan:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Sistem NFT (Nutrient Film Technique)</li>
+                        <li>Sistem wick system untuk pemula</li>
+                        <li>Penggunaan media tanam alternatif (rockwool, cocopeat)</li>
+                        <li>Nutrisi hidroponik organik</li>
+                    </ul>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Keunggulan Sistem:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Produksi sayuran sepanjang tahun</li>
+                        <li>Efisiensi air hingga 90%</li>
+                        <li>Tidak memerlukan lahan luas</li>
+                        <li>Hasil panen lebih cepat dan berkualitas</li>
+                        <li>Ramah lingkungan tanpa pestisida kimia</li>
+                    </ul>
+
+                    <p><em>Program ini telah berhasil diimplementasikan di 25 pekarangan warga dan menghasilkan sayuran organik senilai Rp 2.5 juta per bulan.</em></p>
+                `
+            },
+            tamanbaca: {
+                title: 'Revitalisasi Taman Baca',
+                content: `
+                    <p><strong>Revitalisasi Taman Baca</strong> adalah program pengembangan literasi yang bertujuan meningkatkan minat baca masyarakat Desa Parangargo melalui renovasi dan pengembangan perpustakaan desa.</p>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Renovasi yang Dilakukan:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Perbaikan struktur bangunan perpustakaan</li>
+                        <li>Penambahan rak buku modern</li>
+                        <li>Instalasi sistem pencahayaan yang baik</li>
+                        <li>Pembuatan area baca yang nyaman</li>
+                        <li>Digitalisasi katalog buku</li>
+                    </ul>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Koleksi Buku yang Ditambahkan:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>500+ buku anak dan remaja</li>
+                        <li>Buku-buku motivasi dan pengembangan diri</li>
+                        <li>Buku pertanian dan kewirausahaan</li>
+                        <li>Majalah dan koran terkini</li>
+                        <li>Buku digital interaktif</li>
+                    </ul>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Program Literasi:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Kelas membaca mingguan untuk anak-anak</li>
+                        <li>Diskusi buku bulanan</li>
+                        <li>Program kunjungan sekolah</li>
+                        <li>Lomba baca puisi dan cerita</li>
+                    </ul>
+
+                    <p><em>Sejak program ini berjalan, kunjungan ke taman baca meningkat 300% dan minat baca anak-anak desa meningkat signifikan.</em></p>
+                `
+            }
+        };
+
+        // Product data
+        const productData = {
+            tasbambu: {
+                title: 'Tas Anyaman Bambu',
+                content: `
+                    <p><strong>Tas Anyaman Bambu</strong> adalah produk kerajinan tangan tradisional yang dibuat oleh Kelompok Wanita Tani Desa Parangargo dengan menggunakan bahan bambu lokal yang berkualitas tinggi.</p>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Spesifikasi Produk:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Bahan: Bambu alami pilihan</li>
+                        <li>Ukuran: 30cm x 25cm x 15cm</li>
+                        <li>Berat: 500 gram</li>
+                        <li>Teknik anyaman: Manual tradisional</li>
+                        <li>Warna: Natural bambu</li>
+                    </ul>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Keunggulan Produk:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>100% bahan alami dan ramah lingkungan</li>
+                        <li>Desain unik dan eksklusif</li>
+                        <li>Tahan lama dan kuat</li>
+                        <li>Mendukung ekonomi lokal</li>
+                        <li>Produk handmade dengan sentuhan seni</li>
+                    </ul>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Cara Perawatan:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Jaga agar tidak terkena air hujan langsung</li>
+                        <li>Simpan di tempat kering dan sejuk</li>
+                        <li>Bersihkan dengan kain lembut secara berkala</li>
+                        <li>Hindari paparan sinar matahari langsung dalam waktu lama</li>
+                    </ul>
+
+                    <p><em>Setiap pembelian tas ini turut membantu pemberdayaan ekonomi keluarga di Desa Parangargo. Produk terlaris dengan kualitas premium!</em></p>
+                `
+            },
+            kopirobusta: {
+                title: 'Kopi Robusta Desa',
+                content: `
+                    <p><strong>Kopi Robusta Desa</strong> adalah kopi specialty grade yang diproduksi dari biji kopi robusta pilihan yang ditanam di perkebunan Desa Parangargo dengan sistem organik tanpa bahan kimia.</p>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Spesifikasi Produk:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Jenis: Robusta Specialty Grade</li>
+                        <li>Berat: 250 gram per pack</li>
+                        <li>Proses: Full washed & roasted</li>
+                        <li>Tingkat roast: Medium</li>
+                        <li>Kemasan: Vakum seal premium</li>
+                    </ul>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Profil Rasa:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Aroma: Cokelat dan karamel</li>
+                        <li>Rasa: Body penuh dengan hint cokelat</li>
+                        <li>Aftertaste: Clean dan balanced</li>
+                        <li>Acidity: Rendah dengan sweetness alami</li>
+                        <li>Catatan: Cokelat, hazelnut, dan karamel</li>
+                    </ul>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Keunggulan Produk:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>100% organik tanpa pestisida</li>
+                        <li>Ditanam di ketinggian optimal</li>
+                        <li>Proses roasting manual oleh ahli</li>
+                        <li>Grade specialty dengan skor tinggi</li>
+                        <li>Mendukung petani lokal</li>
+                    </ul>
+
+                    <p><em>Kopi robusta premium dari Desa Parangargo yang telah memenangkan berbagai kompetisi kopi nasional. Rasakan keunikan cita rasa kopi dataran tinggi!</em></p>
+                `
+            },
+            minyakkelapa: {
+                title: 'Minyak Kelapa Murni',
+                content: `
+                    <p><strong>Minyak Kelapa Murni</strong> adalah minyak kelapa extra virgin yang diproduksi secara tradisional oleh masyarakat Desa Parangargo menggunakan kelapa segar pilihan tanpa proses kimia apa pun.</p>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Spesifikasi Produk:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Jenis: Extra Virgin Coconut Oil</li>
+                        <li>Berat: 500 ml per botol</li>
+                        <li>Proses: Cold pressed tradisional</li>
+                        <li>Warna: Jernih dan bening</li>
+                        <li>Kemasan: Botol kaca premium</li>
+                    </ul>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Komposisi & Manfaat:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Asam laurat tinggi (50%)</li>
+                        <li>Vitamin E dan antioksidan alami</li>
+                        <li>Anti bakteri dan anti jamur</li>
+                        <li>Mengandung MCT (Medium Chain Triglycerides)</li>
+                        <li>Baik untuk kesehatan kulit dan rambut</li>
+                    </ul>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Kegunaan Produk:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Untuk memasak dan menggoreng</li>
+                        <li>Perawatan kulit dan rambut</li>
+                        <li>Bahan kosmetik alami</li>
+                        <li>Suplemen kesehatan harian</li>
+                        <li>Bahan baking dan dessert</li>
+                    </ul>
+
+                    <h4 class="font-bold text-lg mt-4 mb-2">Keunggulan Produk:</h4>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>100% murni tanpa pengawet</li>
+                        <li>Diproduksi secara tradisional</li>
+                        <li>Dari kelapa segar pilihan</li>
+                        <li>Tidak mengalami pemanasan berlebih</li>
+                        <li>Mendukung kesejahteraan petani</li>
+                    </ul>
+
+                    <p><em>Minyak kelapa murni berkualitas premium dari Desa Parangargo. Diproduksi dengan cinta dan dedikasi untuk kesehatan Anda dan keluarga!</em></p>
+                `
+            }
+        };
+
+        // Event listeners for activity buttons
+        document.querySelectorAll('.activity-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const activity = this.getAttribute('data-activity');
+                const data = activityData[activity];
+                
+                if (data) {
+                    modalTitle.textContent = data.title;
+                    modalContent.innerHTML = data.content;
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                }
+            });
+        });
+
+        // Close modal functionality
+        closeModal.addEventListener('click', function() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Event listeners for product buttons
+        document.querySelectorAll('.product-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const product = this.getAttribute('data-product');
+                const data = productData[product];
+
+                if (data) {
+                    modalTitle.textContent = data.title;
+                    modalContent.innerHTML = data.content;
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                }
+            });
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
+
+    
+
+</script> 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+  const menuLinks = menu.querySelectorAll("a");
+
+  // Toggle menu saat tombol diklik
+  menuBtn.addEventListener("click", function () {
+    menu.classList.toggle("hidden");
+  });
+
+  // Tutup menu saat link diklik (mobile only)
+  menuLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      if (window.innerWidth < 768) {
+        menu.classList.add("hidden");
+      }
+    });
+  });
+
+});
+</script>
+
+</body></html>
